@@ -1,0 +1,26 @@
+.book-list-item.ng-enter,
+.book-list-item.ng-leave,
+.book-list-item.ng-move {
+  overflow: hidden;
+  transition: 0.5s linear all;
+}
+
+.book-list-item.ng-enter,
+.book-list-item.ng-leave.ng-leave-active,
+.book-list-item.ng-move {
+  height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.book-list-item.ng-enter.ng-enter-active,
+.book-list-item.ng-leave,
+.book-list-item.ng-move.ng-move-active {
+  height: 120px;
+  margin-bottom: 20px;
+  opacity: 1;
+  padding-bottom: 4px;
+  padding-top: 15px;
+}

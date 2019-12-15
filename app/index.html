@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="libraryApp">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Books' Library</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="app.animations.css" />
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+
+    <script src="core/core.module.js"></script>
+    <script src="core/book/book.module.js"></script>
+    <script src="core/book/book.service.js" type="module"></script>
+    <script src="core/author/author.module.js"></script>
+    <script src="core/author/author.service.js" type="module"></script>
+    <script src="core/picture/picture.module.js"></script>
+    <script src="core/picture/picture.service.js" type="module"></script>
+    <script src="core/publisher/publisher.module.js"></script>
+    <script src="core/publisher/publisher.service.js" type="module"></script>
+    <script src="core/config/config.module.js"></script>
+    <script src="core/config/config.service.js" type="module"></script>
+
+
+    <script src="book-detail/book-detail.module.js"></script>
+    <script src="book-detail/book-detail.component.js" type="module"></script>
+    <script src="book-list/book-list.module.js"></script>
+    <script src="book-list/book-list.component.js"></script>
+    <script src="author-detail/author-detail.module.js"></script>
+    <script src="author-detail/author-detail.component.js"></script>
+    <script src="publisher-detail/publisher-detail.module.js"></script>
+    <script src="publisher-detail/publisher-detail.component.js"></script>
+
+  </head>
+  <body>
+
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
+
+  </body>
+</html>

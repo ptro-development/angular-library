@@ -1,0 +1,39 @@
+body {
+  padding: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+  margin-top: 0;
+}
+
+/* View: Book list */
+
+.books {
+  list-style: none;
+}
+
+.books li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.thumb {
+    float: left;
+    height: 110px;
+    margin: -0.5em 1em 1.5em 0;
+    padding-bottom: 1em;
+    width: 70px;
+}
+
+/* View: Book detail */
+
+.book {
+  background-color: white;
+  float: left;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  border: 1px solid #dee2e6;
+}

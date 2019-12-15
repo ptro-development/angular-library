@@ -1,0 +1,15 @@
+<div>
+
+  <img ng-src="{{$ctrl.frontCoverSrc}}" class="book"></img>
+  <h1>{{$ctrl.book.title}}</h1>
+
+  <dl>
+    <dt>Author</dt>
+      <dd><a href="#!/authors/{{$ctrl.author.id}}">{{$ctrl.author.firstName}} {{$ctrl.author.secondName}} {{$ctrl.author.lastName}}</a></dd>
+    <dt>Publisher</dt>
+      <dd><a href="#!/publishers/{{$ctrl.publisher.id}}">{{$ctrl.publisher.name}}</a></dd>
+    <dt>ISBN</dt>
+      <dd>{{$ctrl.isbn}}</dd>
+  </dl>
+
+</div>

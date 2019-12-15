@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <!--Sidebar content-->
+    <div class="col-md-2">
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+    </div>
+
+    <!--Body content-->
+    <div class="col-md-5">
+      <ul class="books">
+        <li ng-repeat="book in $ctrl.books | filter:$ctrl.query | orderBy:'title'" class="img-thumbnail book-list-item">
+          <img ng-src="{{book.frontCoverUrl}}" class="thumb" />
+          <a href="#!/books/{{book.id}}">{{book.title}}</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
