@@ -5,8 +5,8 @@ angular.
   module('bookDetail').
   component('bookDetail', {
     templateUrl: 'book-detail/book-detail.template.html',
-    controller: ['$routeParams', 'Book', 'Config',
-      function BookDetailController($routeParams, Book, Config) {
+    controller: ['$routeParams', 'Book', 'Config', 'PictureSummary',
+      function BookDetailController($routeParams, Book, Config, PictureSummary) {
         let self = this;
         Book.get({id: $routeParams.id}).$promise.then(function(book) {
             self.book = book;
@@ -19,14 +19,11 @@ angular.
             }
             self.author = Book.getAuthor({id: $routeParams.id});
             self.publisher = Book.getPublisher({id: $routeParams.id});
-            Book.getPictures({id: $routeParams.id}).$promise.then(function(pictures) {
-                for (var i = 0; i < pictures.length; i++) {
-                    if (pictures[i].pictureType === 'FRONT_COVER') {
-                        self.frontCoverSrc = Config.CONFIG.API_URL + "/pictures/" + pictures[i].id + "/data";
-                        break;
-                    }
-                }
+
+            PictureSummary.getBookFrontCovers({bookId: book.id}).$promise.then(function(summary) {
+              self.frontCoverSrc = Config.CONFIG.API_URL + "/picturesSummaries/" + summary[0].id + "/picture";
             });
+
             if (self.frontCoverSrc == undefined ) {
                 self.frontCoverSrc = "None";
             }

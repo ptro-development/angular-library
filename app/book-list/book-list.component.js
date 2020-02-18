@@ -5,8 +5,8 @@ angular.
   module('bookList').
   component('bookList', {
     templateUrl: 'book-list/book-list.template.html',
-    controller: ['Book',
-      function BookListController(Book) {
-        this.books = Book.queryWithFrontCoverUrl();
+    controller: ['PictureSummary',
+      function BookListController(PictureSummary) {
+        this.summaries = PictureSummary.queryWithFrontCoverUrl();
       }]
   });

@@ -5,10 +5,10 @@
   "description": "Library aplication",
   "license": "MIT",
   "dependencies": {
-    "angular": "1.7.x",
+    "angular": "^1.7.9",
+    "angular-animate": "1.7.x",
     "angular-resource": "1.7.x",
     "angular-route": "1.7.x",
-    "angular-animate": "1.7.x",
     "bootstrap": "4.3.x",
     "jquery": "3.4.x",
     "popper.js": "1.14.7"

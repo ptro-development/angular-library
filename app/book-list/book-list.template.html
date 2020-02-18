@@ -12,9 +12,9 @@
     <!--Body content-->
     <div class="col-md-5">
       <ul class="books">
-        <li ng-repeat="book in $ctrl.books | filter:$ctrl.query | orderBy:'title'" class="img-thumbnail book-list-item">
-          <img ng-src="{{book.frontCoverUrl}}" class="thumb" />
-          <a href="#!/books/{{book.id}}">{{book.title}}</a>
+        <li ng-repeat="summary in $ctrl.summaries | filter:$ctrl.query | orderBy:'title'" class="img-thumbnail book-list-item">
+          <img ng-src="{{summary.frontCoverUrl}}" class="thumb" />
+          <a href="#!/books/{{summary.bookId}}">{{summary.bookTitle}}</a>
         </li>
       </ul>
     </div>
